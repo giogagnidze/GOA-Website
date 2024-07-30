@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     outline: none;
@@ -8,21 +8,22 @@
     box-sizing: border-box;
 }
 
-img{
+img {
     width: 100%;
-    display: flex;
+    display: block;
 }
 
-a{
+a {
     text-decoration: none;
+    color: white;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #18181B;
 }
 
-nav{
+nav {
     max-width: 1200px;
     margin: auto;
     padding: 2rem 1rem;
@@ -32,24 +33,24 @@ nav{
     gap: 2rem;
 }
 
-.nav-logo{
+.nav-logo {
     max-width: 200px;
 }
 
-.nav-links{
+.nav-links {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 3rem;
 }
 
-.link a{
+.link a {
     position: relative;
     padding-bottom: 0.75rem;
     color: #fff;
 }
 
-.link a::after{
+.link a::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -60,11 +61,11 @@ nav{
     transition: all 0.3s ease;
 }
 
-.link a:hover::after{
+.link a:hover::after {
     width: 100%;
 }
 
-.btn{
+.btn {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: #fff;
@@ -74,32 +75,36 @@ nav{
     transition: all 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #6d00b6;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: auto;
     padding: 5rem 2rem;
 }
 
-.blur{
+.blur {
     position: absolute;
     box-shadow: 0 0 1000px 50px #9900ff;
     z-index: -100;
 }
 
-header{
+header {
     position: relative;
     padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 2rem;
 }
 
-header .content h1{
+header .content {
+    flex: 1;
+}
+
+header .content h1 {
     color: #fff;
     margin-bottom: 1rem;
     font-size: 3rem;
@@ -107,16 +112,17 @@ header .content h1{
     line-height: 4rem;
 }
 
-header .image{
-    position: relative;
+header .image {
+    flex: 1;
+    text-align: center;
 }
 
-header .image img{
+header .image img {
     max-width: 600px;
     margin: auto;
 }
 
-section .header{
+section .header {
     margin-bottom: 1rem;
     color: #fff;
     text-align: center;
@@ -124,22 +130,23 @@ section .header{
     font-weight: 600;
 }
 
-
-.sub-header{
+.sub-header {
     max-width: 600px;
     margin: auto;
     text-align: center;
     color: #ccc;
 }
 
-.pricing{
+.pricing {
     margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
 }
 
-.pricing .card{
+.pricing .card {
+    flex: 1 1 calc(33.333% - 2rem);
     padding: 3rem 2rem;
     background-color: #27272a;
     display: flex;
@@ -148,28 +155,25 @@ section .header{
     border-radius: 15px;
     transition: all 0.3s ease;
 }
-a{
-    text-decoration: none;
-    color: white;
-}
-.pricing .card:hover{
+
+.pricing .card:hover {
     background-color: #323232;
     border-color: #9900ff;
 }
 
-.pricing .card .content{
+.pricing .card .content {
     flex: 1;
     margin-bottom: 2rem;
 }
 
-.pricing .card h4{
+.pricing .card h4 {
     margin-bottom: 1rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.pricing .card h3{
+.pricing .card h3 {
     color: #fff;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -178,52 +182,57 @@ a{
     border-bottom: 2px dashed #fff;
 }
 
-.pricing .card p{
+.pricing .card p {
     color: #fff;
     margin-bottom: 0.75rem;
 }
 
-.pricing .card p i{
+.pricing .card p i {
     color: #ccc;
     font-size: 1.2rem;
     margin-right: 0.3rem;
 }
 
-.pricing .card button{
+.pricing .card button {
     color: #fff;
     background-color: transparent;
     border: 2px solid #9900ff;
 }
 
-.pricing .card button:hover{
+.pricing .card button:hover {
     background-color: #9900ff;
     border-color: #9900ff;
 }
 
-footer{
+footer {
     position: relative;
-    display: grid;
-    grid-template-columns: 400px repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
+    justify-content: space-between;
 }
 
-footer .column .logo{
+footer .column {
+    flex: 1 1 calc(25% - 2rem);
+}
+
+footer .column .logo {
     max-width: 100px;
     margin-bottom: 2rem;
 }
 
-footer .column p{
+footer .column p {
     color: #ccc;
     margin-bottom: 2rem;
 }
 
-footer .column .socials{
+footer .column .socials {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-footer .column .socials a{
+footer .column .socials a {
     color: #ccc;
     border: 1px solid #ccc;
     padding: 5px 10px;
@@ -232,30 +241,31 @@ footer .column .socials a{
     transition: all 0.3s ease;
 }
 
-footer .column .socials a:hover{
+footer .column .socials a:hover {
     color: #fff;
     background-color: #9900ff;
     border-color: #9900ff;
 }
 
-footer .column h4{
+footer .column h4 {
     color: #fff;
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-footer .column > a{
+footer .column > a {
     display: block;
     color: #ccc;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
 }
 
-footer .column > a:hover{
+footer .column > a:hover {
     color: #9900ff;
 }
-.copyright{
+
+.copyright {
     max-width: 1200px;
     margin: auto;
     padding: 1rem;
@@ -263,51 +273,54 @@ footer .column > a:hover{
     font-size: 0.8rem;
     text-align: center;
 }
-@media (width < 900px){
-    .nav-links{
+
+@media (max-width: 900px) {
+    .nav-links {
         display: none;
     }
-    header{
-        grid-template-columns: repeat(1, 1fr);
+    header {
+        flex-direction: column;
     }
-    header .image{
-        grid-area: 1/1/2/2;
+    .features {
+        flex-wrap: wrap;
     }
-    .features{
-        grid-template-columns: repeat(2, 1fr);
+    .pricing {
+        flex-wrap: wrap;
     }
-    .pricing{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    footer{
-        grid-template-columns: 1fr 200px;
+    footer {
+        flex-wrap: wrap;
     }
 }
-@media (width < 600px){
-    header .image::before{
+
+@media (max-width: 600px) {
+    header .image::before {
         display: none;
     }
-    .features{
-        grid-template-columns: repeat(1, 1fr);
+    .features {
+        flex-wrap: wrap;
     }
-    .pricing{
-        grid-template-columns: repeat(1, 1fr);
+    .pricing {
+        flex-wrap: wrap;
     }
-    footer{
-        grid-template-columns: 1fr 150px;
+    footer {
+        flex-wrap: wrap;
     }
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 12px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: #9900ff;
     border-radius: 6px;
     transition: 0.5s;
-} 
-::-webkit-scrollbar-thumb:hover{
+}
+
+::-webkit-scrollbar-thumb:hover {
     background-color: #9900ff;
 }
